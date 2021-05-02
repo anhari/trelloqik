@@ -4,5 +4,8 @@ export default function (server) {
     This data will not be loaded in your tests.
   */
 
-  server.createList('todo', 10);
+  server.create('todo', { title: 'Buy Milk' });
+  server.create('todo', { title: 'Dog Bath' });
+  server.create('todo', { title: 'Donate to UNICEF' });
+  server.create('todo', { title: "Ponder life's meaning" });
 }

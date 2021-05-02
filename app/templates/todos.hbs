@@ -1,6 +1,31 @@
 {{page-title "Todos"}}
-<TodoList>
-    {{#each @model as |todo| }}
-      <TodoListItem @todo={{todo}}></TodoListItem>
-    {{/each}}
-</TodoList>
+
+<section class="p-4">
+  <h1 class="font-bold text-xl">Todos</h1>
+  <div class="flex justify-left items-top mt-4 space-x-4">
+    <div>
+      <h2 class="text-sm font-bold uppercase">On Deck</h2>
+      <TodoList>
+          {{#each @model as |todo| }}
+            <TodoListItem @todo={{todo}}></TodoListItem>
+          {{/each}}
+      </TodoList>
+    </div>
+    <div>
+      <h2 class="text-sm font-bold uppercase">In Progress</h2>
+      <TodoList>
+          {{#each @model as |todo| }}
+            <TodoListItem @todo={{todo}}></TodoListItem>
+          {{/each}}
+      </TodoList>
+    </div>
+    <div>
+      <h2 class="text-sm font-bold uppercase">Done</h2>
+      <TodoList>
+          {{#each @model as |todo| }}
+            <TodoListItem @todo={{todo}}></TodoListItem>
+          {{/each}}
+      </TodoList>
+    </div>
+  </div>
+</section>
