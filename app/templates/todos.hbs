@@ -1,31 +1,32 @@
 {{page-title "Todos"}}
 
-<section class="p-4">
+<section class="p-4 h-screen">
   <h1 class="font-bold text-xl">Todos</h1>
-  <div class="flex justify-left items-top mt-4 space-x-4">
-    <div>
-      <h2 class="text-sm font-bold uppercase">On Deck</h2>
-      <TodoList>
-          {{#each @model as |todo| }}
-            <TodoListItem @todo={{todo}}></TodoListItem>
+  <Todo::Form />
+  <div class="flex justify-left items-top mt-4 space-x-4 items-stretch h-full">
+    <div class="p-2 bg-gray-200 rounded flex-grow">
+      <h2 class="text-sm font-bold uppercase mb-2">On Deck</h2>
+      <Todo::List>
+          {{#each @model.onDeck as |todo| }}
+            <Todo::Item @todo={{todo}}></Todo::Item>
           {{/each}}
-      </TodoList>
+      </Todo::List>
     </div>
-    <div>
-      <h2 class="text-sm font-bold uppercase">In Progress</h2>
-      <TodoList>
-          {{#each @model as |todo| }}
-            <TodoListItem @todo={{todo}}></TodoListItem>
+    <div class="p-2 bg-gray-200 rounded flex-grow">
+      <h2 class="text-sm font-bold uppercase mb-2">In Progress</h2>
+      <Todo::List>
+          {{#each @model.inProgress as |todo| }}
+            <Todo::Item @todo={{todo}}></Todo::Item>
           {{/each}}
-      </TodoList>
+      </Todo::List>
     </div>
-    <div>
-      <h2 class="text-sm font-bold uppercase">Done</h2>
-      <TodoList>
-          {{#each @model as |todo| }}
-            <TodoListItem @todo={{todo}}></TodoListItem>
+    <div class="p-2 bg-gray-200 rounded flex-grow">
+      <h2 class="text-sm font-bold uppercase mb-2">Done</h2>
+      <Todo::List>
+          {{#each @model.done as |todo| }}
+            <Todo::Item @todo={{todo}}></Todo::Item>
           {{/each}}
-      </TodoList>
+      </Todo::List>
     </div>
   </div>
 </section>
