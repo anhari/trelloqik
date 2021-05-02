@@ -1,0 +1,6 @@
+{{page-title "Todos"}}
+<TodoList>
+    {{#each @model as |todo| }}
+      <TodoListItem @todo={{todo}}></TodoListItem>
+    {{/each}}
+</TodoList>
