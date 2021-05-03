@@ -2,7 +2,7 @@
 
 <section class="p-4 h-screen">
   <h1 class="font-bold text-xl">Todos</h1>
-  <Todo::Form />
+  <Todo::Form @addTodo={{this.addTodo}} />
   <div class="flex justify-left items-top mt-4 space-x-4 items-stretch h-full">
     <div class="p-2 bg-gray-200 rounded flex-grow">
       <h2 class="text-sm font-bold uppercase mb-2">On Deck</h2>
