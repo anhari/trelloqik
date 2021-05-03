@@ -6,6 +6,11 @@ export default class TodosController extends Controller {
   @service store;
 
   @action
+  toggleOrientation() {
+    document.getElementById('kanban-container').classList.toggle('flex-col');
+  }
+
+  @action
   addTodo(title) {
     const newTodo = {
       title,
